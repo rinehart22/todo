@@ -16,7 +16,7 @@ def create(request):
     form = PersonForm()
     if request.method == "POST":
         form = PersonForm(request.POST)
-        if form.is_valid:
+        if form.is_valid():
             form.save()
         return redirect('/')
     context ={'form':form}
